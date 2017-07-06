@@ -12,16 +12,29 @@ class JerseyViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     // Oulets
     
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var addupdatebutton: UIButton!
     @IBOutlet weak var jerseyImageView: UIImageView!
     @IBOutlet weak var clubNameTextField: UITextField!
     
     var imagePicker = UIImagePickerController()
+    
+    var  jersey : Jersey? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
 
         imagePicker.delegate = self
+        
+        if jersey != nil {
+         jerseyImageView.image = UIImage(data: jersey!.image! as Data)
+            clubNameTextField.text = jersey!.title
+            
+            addupdatebutton.setTitle("Update", for: .normal)
+        } else {
+            deleteButton.isHidden = true
+        }
         
     }
 
@@ -46,22 +59,51 @@ class JerseyViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func cameraTapped(_ sender: Any) {
+        imagePicker.sourceType = .camera
+        
+        present(imagePicker, animated: true, completion: nil)
+
     }
     
     @IBAction func addTapped(_ sender: Any) {
+        // There is game updates
         
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        if jersey != nil {
+            jersey!.title = clubNameTextField.text
+            jersey!.image = UIImagePNGRepresentation(jerseyImageView.image!) as NSData?
+
+            
+        }else{
+            //no game so New game and saves
+            
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            let jersey = Jersey(context: context)
+            jersey.title = clubNameTextField.text
+            jersey.image = UIImagePNGRepresentation(jerseyImageView.image!) as NSData?
+            
+        }
+        // saves
         
-        let jersey = Jersey(context: context)
-        jersey.title = clubNameTextField.text
-        jersey.image = UIImagePNGRepresentation(jerseyImageView.image!) as NSData?
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
         navigationController!.popViewController(animated: true)
         
 
     }
+      // deletes and saves deletion
+    
+    @IBAction func deleteTapped(_ sender: Any) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        context.delete(jersey!)
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        navigationController!.popViewController(animated: true)
 
+        
+    }
 
     
 }

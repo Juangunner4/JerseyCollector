@@ -49,6 +49,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.imageView?.image = UIImage(data: jersey.image! as Data)
             return cell
         }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let jersey = jerseys[indexPath.row]
+        performSegue(withIdentifier: "jerseySegue", sender: jersey)
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! JerseyViewController
+        nextVC.jersey = sender as? Jersey
+    }
 }
 
 

@@ -39,7 +39,7 @@
                     <navigationItem key="navigationItem" id="eHV-FW-PbS">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="r4h-4u-TAK">
                             <connections>
-                                <segue destination="dMM-Xn-KBi" kind="show" id="onz-52-53z"/>
+                                <segue destination="dMM-Xn-KBi" kind="show" identifier="jerseySegue" id="onz-52-53z"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -84,13 +84,22 @@
                                     <action selector="addTapped:" destination="dMM-Xn-KBi" eventType="touchUpInside" id="hun-ua-Khq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJc-uY-z8A">
+                                <rect key="frame" x="165.5" y="364" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteTapped:" destination="dMM-Xn-KBi" eventType="touchUpInside" id="i5u-nQ-bCo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="h0a-Ch-0Bn" firstAttribute="centerX" secondItem="3VA-ga-bca" secondAttribute="centerX" id="0nG-Eg-0gm"/>
+                            <constraint firstItem="QJc-uY-z8A" firstAttribute="centerX" secondItem="3VA-ga-bca" secondAttribute="centerX" id="1bu-8t-Swj"/>
                             <constraint firstItem="Omp-vN-0A1" firstAttribute="width" secondItem="3G9-d1-4OE" secondAttribute="width" id="4kn-pA-L3m"/>
                             <constraint firstItem="3G9-d1-4OE" firstAttribute="top" secondItem="O60-bv-8hk" secondAttribute="bottom" constant="20" id="BU6-Gq-ScK"/>
                             <constraint firstItem="Omp-vN-0A1" firstAttribute="centerX" secondItem="3VA-ga-bca" secondAttribute="centerX" id="KN3-PN-n4c"/>
+                            <constraint firstItem="QJc-uY-z8A" firstAttribute="top" secondItem="h0a-Ch-0Bn" secondAttribute="bottom" constant="20" id="Qdg-we-GTm"/>
                             <constraint firstItem="3G9-d1-4OE" firstAttribute="centerX" secondItem="3VA-ga-bca" secondAttribute="centerX" id="UMo-Py-zgb"/>
                             <constraint firstItem="Omp-vN-0A1" firstAttribute="centerX" secondItem="3VA-ga-bca" secondAttribute="centerX" id="ZEf-zD-LFp"/>
                             <constraint firstItem="Omp-vN-0A1" firstAttribute="top" secondItem="3G9-d1-4OE" secondAttribute="bottom" constant="20" id="cBL-XT-WoK"/>
@@ -112,7 +121,9 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addupdatebutton" destination="h0a-Ch-0Bn" id="KS9-AZ-SHX"/>
                         <outlet property="clubNameTextField" destination="Omp-vN-0A1" id="Im5-fv-iwz"/>
+                        <outlet property="deleteButton" destination="QJc-uY-z8A" id="uKQ-46-Lij"/>
                         <outlet property="jerseyImageView" destination="3G9-d1-4OE" id="Jn5-sx-boB"/>
                     </connections>
                 </viewController>

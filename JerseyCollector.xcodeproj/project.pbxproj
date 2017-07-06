@@ -13,6 +13,8 @@
 		CEE166661F0D5FEF00DCA5FF /* JerseyCollector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEE166641F0D5FEF00DCA5FF /* JerseyCollector.xcdatamodeld */; };
 		CEE166681F0D5FEF00DCA5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE166671F0D5FEF00DCA5FF /* Assets.xcassets */; };
 		CEE1666B1F0D5FEF00DCA5FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE166691F0D5FEF00DCA5FF /* LaunchScreen.storyboard */; };
+		CEE166731F0D6A6B00DCA5FF /* arsenal-17-18-home-away-and-third-ki (1).jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEE166721F0D6A6B00DCA5FF /* arsenal-17-18-home-away-and-third-ki (1).jpg */; };
+		CEE166751F0D6BE500DCA5FF /* JerseyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE166741F0D6BE400DCA5FF /* JerseyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		CEE166671F0D5FEF00DCA5FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEE1666A1F0D5FEF00DCA5FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEE1666C1F0D5FEF00DCA5FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEE166721F0D6A6B00DCA5FF /* arsenal-17-18-home-away-and-third-ki (1).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "arsenal-17-18-home-away-and-third-ki (1).jpg"; sourceTree = "<group>"; };
+		CEE166741F0D6BE400DCA5FF /* JerseyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JerseyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,11 @@
 		CEE1665C1F0D5FEF00DCA5FF /* JerseyCollector */ = {
 			isa = PBXGroup;
 			children = (
+				CEE166721F0D6A6B00DCA5FF /* arsenal-17-18-home-away-and-third-ki (1).jpg */,
 				CEE1665D1F0D5FEF00DCA5FF /* AppDelegate.swift */,
 				CEE1665F1F0D5FEF00DCA5FF /* ViewController.swift */,
 				CEE166611F0D5FEF00DCA5FF /* Main.storyboard */,
+				CEE166741F0D6BE400DCA5FF /* JerseyViewController.swift */,
 				CEE166671F0D5FEF00DCA5FF /* Assets.xcassets */,
 				CEE166691F0D5FEF00DCA5FF /* LaunchScreen.storyboard */,
 				CEE1666C1F0D5FEF00DCA5FF /* Info.plist */,
@@ -126,6 +132,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE166731F0D6A6B00DCA5FF /* arsenal-17-18-home-away-and-third-ki (1).jpg in Resources */,
 				CEE1666B1F0D5FEF00DCA5FF /* LaunchScreen.storyboard in Resources */,
 				CEE166681F0D5FEF00DCA5FF /* Assets.xcassets in Resources */,
 				CEE166631F0D5FEF00DCA5FF /* Main.storyboard in Resources */,
@@ -141,6 +148,7 @@
 			files = (
 				CEE166601F0D5FEF00DCA5FF /* ViewController.swift in Sources */,
 				CEE166661F0D5FEF00DCA5FF /* JerseyCollector.xcdatamodeld in Sources */,
+				CEE166751F0D6BE500DCA5FF /* JerseyViewController.swift in Sources */,
 				CEE1665E1F0D5FEF00DCA5FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
